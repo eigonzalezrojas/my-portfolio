@@ -19,9 +19,22 @@ function Presentation() {
             Web developer based in Talca, Chile. I am an adventurous person and I
             am ready for the next challenge!
           </p>
-          <button className="bg-green-500 text-white px-6 py-2 rounded-lg hover:bg-green-600 transition">
-            Contact Me
-          </button>
+          <div className="flex flex-col items-center gap-4 text-1xl text-gray-300">
+            <button className="bg-green-500 text-white px-6 py-2 rounded-lg hover:bg-green-600 transition">
+              Contact Me
+            </button>
+            <div className="flex gap-4">
+              <a href="https://www.facebook.com/eithel.gonzalezrojas" target="_blank" rel="noopener noreferrer" className="hover:text-green-400 transition">
+                <i className="fab fa-facebook"></i>
+              </a>
+              <a href="https://www.instagram.com/eithel_08/" target="_blank" rel="noopener noreferrer" className="hover:text-green-400 transition">
+                <i className="fab fa-instagram"></i>
+              </a>
+              <a href="https://x.com/Eithel_08" target="_blank" rel="noopener noreferrer" className="hover:text-green-400 transition">
+                <i className="fab fa-twitter"></i>
+              </a>
+            </div>            
+          </div>          
         </div>
 
 
