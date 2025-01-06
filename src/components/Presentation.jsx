@@ -1,10 +1,7 @@
-import React from "react";
-
 function Presentation() {
   return (
-    <div className="bg-gray-900 text-white min-h-screen flex items-center justify-center p-4">
+    <div className="bg-gray-900 text-white min-h-screen flex items-center justify-center p-4 mb-0">
       <div className="flex flex-col lg:flex-row items-center bg-gray-800 p-6 md:p-8 rounded-lg shadow-lg max-w-4xl w-full">
-
         <div className="lg:w-1/2 text-center lg:text-left mb-6 lg:mb-0">
           <p className="text-green-400 uppercase tracking-wide text-sm mb-2">
             Hello, I'm
@@ -36,8 +33,6 @@ function Presentation() {
             </div>            
           </div>          
         </div>
-
-
         <div className="lg:w-1/2 flex justify-center">
           <div className="w-44 h-44 sm:w-52 sm:h-52 md:w-64 md:h-64 rounded-full overflow-hidden shadow-lg bg-gray-700 p-2 flex items-center justify-center" style={{ backgroundColor: "rgb(247, 239, 228)" }}>
             <img

@@ -1,13 +1,18 @@
-import React from "react";
-
 function About() {
   return (
-    <section className="about">
-      <h2>Acerca de mí</h2>
-      <p>
-        Ingeniero en Informática con más de 5 años de experiencia en el desarrollo de soluciones tecnológicas y más de 3 años como docente en informática, especializado en la enseñanza online. Poseo un Magíster en Informática Educacional, lo que me permite combinar conocimientos técnicos con habilidades pedagógicas para crear experiencias de aprendizaje efectivas. Además, he trabajado como freelance en el diseño y desarrollo de sitios web y sistemas web, destacándome por ofrecer soluciones personalizadas y funcionales. Comprometido con la innovación, el aprendizaje continuo y la entrega de resultados de alta calidad.
-      </p>
-    </section>
+    <div className="bg-gray-900 text-white flex items-center justify-center p-4 py-16">
+      <div className="max-w-4xl w-full">
+        <h2 className="text-3xl sm:text-4xl font-bold text-green-400 mb-6 text-center">
+          About Me
+        </h2>
+        <p className="text-gray-300 text-sm sm:text-base leading-relaxed">
+          I am a Computer Engineer with over 5 years of experience in developing technological solutions and more than 3 years as an online computer science instructor. I hold a Master's degree in Educational Informatics, which allows me to combine technical knowledge with pedagogical skills to create effective learning experiences. 
+        </p>
+        <p className="text-gray-300 text-sm sm:text-base leading-relaxed mt-4">
+          Additionally, I have worked as a freelance web designer and developer, specializing in creating personalized and functional web solutions. I am committed to innovation, continuous learning, and delivering high-quality results.
+        </p>
+      </div>
+    </div>
   );
 }
 
