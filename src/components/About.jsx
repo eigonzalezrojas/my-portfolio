@@ -11,6 +11,20 @@ function About() {
         <p className="text-gray-300 text-sm sm:text-base leading-relaxed mt-4">
           Additionally, I have worked as a freelance web designer and developer, specializing in creating personalized and functional web solutions. I am committed to innovation, continuous learning, and delivering high-quality results.
         </p>
+      {/* Icons Section */}
+      <div className="flex justify-center gap-8 mt-8">
+          {/* Programmer Icon */}
+          <div className="flex flex-col items-center">
+            <i className="fas fa-laptop-code text-green-400 text-6xl"></i>
+            <p className="mt-4 text-lg font-semibold">Programmer</p>
+          </div>
+
+          {/* Professor Icon */}
+          <div className="flex flex-col items-center">
+            <i className="fas fa-chalkboard-teacher text-green-400 text-6xl"></i>
+            <p className="mt-4 text-lg font-semibold">Professor</p>
+          </div>
+        </div>
       </div>
     </div>
   );
