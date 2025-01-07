@@ -3,6 +3,7 @@ import Navbar from "./components/Navbar";
 import Presentation from "./components/Presentation";
 import Navigation from "./components/Navigation";
 import About from "./components/About";
+import Experience from "./components/Experience";
 
 function App() {
   return (
@@ -13,6 +14,9 @@ function App() {
       </section>
       <section className="mt-0">
         <About />
+      </section>
+      <section className="mt-0">
+        <Experience />
       </section>
       <Navigation />
     </div>
