@@ -37,13 +37,18 @@ function Navbar() {
               </a>
             </li>
             <li>
-              <a href="#" className="block py-2 px-3 text-white hover:text-green-400 md:p-0" >
+              <a href="#about" className="block py-2 px-3 text-white hover:text-green-400 md:p-0" >
                 About
               </a>
             </li>
             <li>
-              <a href="#" className="block py-2 px-3 text-white hover:text-green-400 md:p-0" >
+              <a href="#experience" className="block py-2 px-3 text-white hover:text-green-400 md:p-0" >
                 Experience
+              </a>
+            </li>
+            <li>
+              <a href="#education" className="block py-2 px-3 text-white hover:text-green-400 md:p-0" >
+                Education
               </a>
             </li>
             <li>
