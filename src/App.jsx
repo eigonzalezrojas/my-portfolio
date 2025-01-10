@@ -5,6 +5,7 @@ import Navigation from "./components/Navigation";
 import About from "./components/About";
 import Experience from "./components/Experience";
 import Education from "./components/Education";
+import Projects from "./components/Projects";
 
 function App() {
   return (
@@ -21,6 +22,9 @@ function App() {
       </section>
       <section id ="education" className="mt-0">
         <Education />
+      </section>
+      <section id ="projects" className="mt-0">
+        <Projects />
       </section>
       <Navigation />
     </div>
