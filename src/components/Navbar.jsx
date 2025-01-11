@@ -52,7 +52,7 @@ function Navbar() {
               </a>
             </li>
             <li>
-              <a href="#" className="block py-2 px-3 text-white hover:text-green-400 md:p-0">
+              <a href="#projects" className="block py-2 px-3 text-white hover:text-green-400 md:p-0">
                 Projects
               </a>
             </li>
