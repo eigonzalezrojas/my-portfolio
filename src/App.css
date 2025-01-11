@@ -11,3 +11,12 @@
     transform: translateX(-100%);
   }
 }
+/* Hover effect navigation */
+.hover\:scale-125 {
+  transform: scale(1);
+  transition: transform 0.2s ease-in-out;
+}
+
+.hover\:scale-125:hover {
+  transform: scale(1.25);
+}
