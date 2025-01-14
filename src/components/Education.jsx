@@ -17,20 +17,20 @@ function Education() {
     ];
 
     return (
-        <div className="bg-gray-900 text-white flex items-center justify-center p-4 py-16">
+        <div className="dark:bg-gray-900 bg-white dark:text-white text-black flex items-center justify-center p-4 py-16">
             <div className="max-w-4xl w-full">
-                <h2 className="text-3xl font-bold text-green-400 mb-6 text-center">Education</h2>
+                <h2 className="text-3xl font-bold dark:text-green-400 text-black mb-6 text-center">Education</h2>
                 <div className="space-y-6">
                     {details.map((detail, index) => (
-                        <div key={index} className="flex items-center justify-between bg-gray-800 p-4 rounded-lg shadow-md">
+                        <div key={index} className="flex items-center justify-between dark:bg-gray-800 bg-green-500 p-4 rounded-lg shadow-md">
                             <div className="flex items-center">
                                 <img src={detail.logo} alt={`${detail.company} logo`} className="w-12 h-12 rounded-full mr-4"/>
                             <div>
                                 <h3 className="text-xl font-semibold">{detail.company}</h3>
-                                <p className="text-gray-400">{detail.role}</p>
+                                <p className="dark:text-gray-400 text-white">{detail.role}</p>
                             </div>
                         </div>
-                            <p className="text-gray-400">{detail.date}</p>
+                            <p className="dark:text-gray-400 text-white">{detail.date}</p>
                         </div>
                     ))}
                 </div>

@@ -35,30 +35,30 @@ function Projects() {
   ];
 
   return (
-    <div className="bg-gray-900 text-white flex items-center justify-center p-4 py-16">
+    <div className="dark:bg-gray-900 bg-white text-white flex items-center justify-center p-4 py-16">
       <div className="max-w-4xl w-full">
-        <h2 className="text-3xl font-bold text-green-400 mb-6 text-center">
+        <h2 className="text-3xl font-bold dark:text-green-400 text-gray-900 mb-6 text-center">
           My Projects
         </h2>
-        <p className="text-gray-300 text-center mb-8">
+        <p className="dark:text-gray-300 text-gray-900 text-center mb-8">
           As a Full Stack Web Developer, I have worked on a variety of projects, ranging from simple websites to complex web applications. Here are some of my favorites.
         </p>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
           {projects.map((project, index) => (
-            <div key={index} className="bg-gray-800 p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
-              <h3 className="text-xl font-semibold text-green-400 mb-2">
+            <div key={index} className="dark:bg-gray-800 bg-green-500 p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
+              <h3 className="text-xl font-semibold dark:text-green-400 text-gray-900 mb-2">
                 {project.title}
               </h3>
-              <p className="text-gray-400 text-sm mb-4">{project.date}</p>
-              <p className="text-gray-300 text-sm mb-4">{project.description}</p>
+              <p className="dark:text-gray-400 text-gray-900 text-sm mb-4">{project.date}</p>
+              <p className="dark:text-gray-300 text-gray-900 text-sm mb-4">{project.description}</p>
               <div className="flex flex-wrap gap-2 mb-4">
                 {project.technologies.map((tech, techIndex) => (
-                  <span key={techIndex} className="bg-gray-700 text-gray-300 text-xs px-2 py-1 rounded">
+                  <span key={techIndex} className="dark:bg-gray-700 bg-white dark:text-gray-300 text-gray-900 text-xs px-2 py-1 rounded">
                     {tech}
                   </span>
                 ))}
               </div>
-              <a href={project.github} target="_blank" rel="noopener noreferrer" className="bg-green-400 text-gray-900 px-4 py-2 rounded font-semibold hover:bg-green-500 transition-colors">
+              <a href={project.github} target="_blank" rel="noopener noreferrer" className="dark:bg-green-400 bg-black dark:text-gray-900 text-white px-4 py-2 rounded font-semibold hover:dark:bg-green-500 hover:bg-white hover:text-black transition-colors">
                 Ver en GitHub
               </a>
             </div>

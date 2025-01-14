@@ -1,3 +1,20 @@
+/* Estilos generales */
+body {
+  transition: background-color 0.3s, color 0.3s;
+}
+
+/* Modo claro */
+body {
+  background-color: #f8f9fa;
+  color: #212529;
+}
+
+/* Modo oscuro */
+.dark body {
+  background-color: #1a202c;
+  color: #f8f9fa;
+}
+
 /* Skills Carousel Animation */
 .animate-scroll {
   animation: scroll 15s linear infinite;

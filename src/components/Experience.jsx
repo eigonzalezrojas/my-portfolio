@@ -60,32 +60,24 @@ function Experience() {
     };
 
     return (
-        <div className="bg-gray-900 text-white flex items-center justify-center p-4 py-16">
+        <div className="dark:bg-gray-900 bg-white dark:text-white text-black flex items-center justify-center p-4 py-16">
             <div className="max-w-4xl w-full">
-                <h2 className="text-3xl font-bold text-green-400 mb-6 text-center">Work Experience</h2>
+                <h2 className="text-3xl font-bold dark:text-green-400 text-black mb-6 text-center">Work Experience</h2>
                 <div className="space-y-6">
                     {experiences.map((experience, index) => (
-                    <div
-                        key={index}
-                        className="bg-gray-800 p-4 rounded-lg shadow-md cursor-pointer"
-                        onClick={() => toggleAccordion(index)}
-                    >
+                    <div key={index} className="dark:bg-gray-800 bg-green-500 p-4 rounded-lg shadow-md cursor-pointer" onClick={() => toggleAccordion(index)}>
                         <div className="flex items-center justify-between">
-                        <div className="flex items-center">
-                            <img
-                            src={experience.logo}
-                            alt={`${experience.company} logo`}
-                            className="w-12 h-12 rounded-full mr-4"
-                            />
-                            <div>
-                            <h3 className="text-xl font-semibold">{experience.company}</h3>
-                            <p className="text-gray-400">{experience.role}</p>
+                            <div className="flex items-center">
+                                <img src={experience.logo} alt={`${experience.company} logo`} className="w-12 h-12 rounded-full mr-4"/>
+                                <div>
+                                    <h3 className="text-xl font-semibold">{experience.company}</h3>
+                                    <p className="dark:text-gray-400 text-white">{experience.role}</p>
+                                </div>
                             </div>
-                        </div>
-                        <p className="text-gray-400">{experience.date}</p>
+                            <p className="dark:text-gray-400 text-white">{experience.date}</p>
                         </div>
                         {expandedIndex === index && (
-                        <div className="mt-4 text-gray-300">
+                        <div className="mt-4 dark:text-gray-300 text-white">
                             <p>{experience.details}</p>
                         </div>
                         )}

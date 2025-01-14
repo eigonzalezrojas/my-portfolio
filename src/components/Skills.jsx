@@ -46,27 +46,29 @@ function Skills() {
     ];
 
     return (
-        <div className="bg-gray-900 text-white flex items-center justify-center p-4 py-16">
-            <div className="max-w-4xl w-full">
-                <h2 className="text-3xl font-bold text-green-400 mb-6 text-center">
-                    My Skills
-                </h2>
-                <div className="overflow-hidden relative">
-                    <div className="flex animate-scroll gap-8">
-                        {skills.map((skill, index) => (
-                            <div key={index} className="flex flex-col items-center justify-center bg-white p-4 rounded-lg shadow-md">
-                                {skill.icon}
-                                <p className="text-gray-900 text-sm mt-2">{skill.name}</p>
-                            </div>
-                        ))}
-                        {skills.map((skill, index) => (
-                            <div key={`duplicate-${index}`} className="flex flex-col items-center justify-center bg-white p-4 rounded-lg shadow-md">
+        <div className="dark:bg-gray-900 bg-white dark:text-white text-black flex items-center justify-center p-4 py-16">
+            <div className="flex flex-col lg:flex-row items-center dark:bg-gray-800 bg-green-500 p-6 md:p-8 rounded-lg shadow-lg max-w-4xl w-full">
+                <div className="max-w-4xl w-full">
+                    <h2 className="text-3xl font-bold dark:text-green-400 text-black mb-6 text-center">
+                        My Skills
+                    </h2>
+                    <div className="overflow-hidden relative">
+                        <div className="flex animate-scroll gap-8">
+                            {skills.map((skill, index) => (
+                                <div key={index} className="flex flex-col items-center justify-center bg-white p-4 rounded-lg shadow-md border border-gray-300 dark:border-gray-600">
                                     {skill.icon}
-                                <p className="text-gray-900 text-sm mt-2">
-                                    {skill.name}
-                                </p>
-                            </div>
-                        ))}
+                                    <p className="text-gray-900 text-sm mt-2">{skill.name}</p>
+                                </div>
+                            ))}
+                            {skills.map((skill, index) => (
+                                <div key={`duplicate-${index}`} className="flex flex-col items-center justify-center bg-white p-4 rounded-lg shadow-md">
+                                        {skill.icon}
+                                    <p className="text-gray-900 text-sm mt-2">
+                                        {skill.name}
+                                    </p>
+                                </div>
+                            ))}
+                        </div>
                     </div>
                 </div>
             </div>
