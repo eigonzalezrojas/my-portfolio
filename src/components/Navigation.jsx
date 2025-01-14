@@ -1,17 +1,21 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "../../src/App.css"
 
 function Navigation() {
-  const [darkMode, setDarkMode] = useState(false);
+  const [darkMode, setDarkMode] = useState(true);
+
+  useEffect(() => {
+    if (darkMode) {
+      document.documentElement.classList.add("dark");
+    } else {
+      document.documentElement.classList.remove("dark");
+    }
+  }, [darkMode]);
 
   const toggleTheme = () => {
     setDarkMode(!darkMode);
-    if (darkMode) {
-      document.documentElement.classList.remove("dark");
-    } else {
-      document.documentElement.classList.add("dark");
-    }
   };
+
 
   return (
     <div className="fixed bottom-4 left-1/2 transform -translate-x-1/2 bg-gray-800 dark:bg-gray-900 p-2 rounded-full shadow-lg border-2 border-gray-300 dark:border-gray-700">
@@ -25,7 +29,7 @@ function Navigation() {
         <a href="https://www.linkedin.com/in/eigonzalezrojas/" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-green-400 transition hover:scale-125" aria-label="LinkedIn">
           <i className="fab fa-linkedin text-lg"></i>
         </a>
-        <a href="mailto:eithelgonzalezrojas@gmail.com" className="text-gray-300 hover:text-green-400 transition hover:scale-125" aria-label="Email" >
+        <a href="mailto:eithelgonzalezrojas@gmail.com" className="text-gray-300 hover:text-green-400 transition hover:scale-125" aria-label="Email">
           <i className="fas fa-envelope text-lg"></i>
         </a>
         <button onClick={toggleTheme} className="text-gray-300 hover:text-green-400 transition hover:scale-125 focus:outline-none" aria-label="Toggle Theme">
