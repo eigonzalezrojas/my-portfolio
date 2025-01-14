@@ -6,13 +6,13 @@ function Education() {
             company: "Universidad de Concepción",
             role: "Magíster en Informática Educacional",
             date: "Mar 2020 - Sep 2021 [Graduated]",
-            logo: "/public/udec.jpg",            
+            logo: "/udec.jpg",            
         },
         {
             company: "Universidad Tecnológica de Chile Inacap",
             role: "Ingeniería en Informática",
             date: "Mar 2015 - Oct 2019 [Graduated]",
-            logo: "/public/inacap.jpg",            
+            logo: "/inacap.jpg",            
         },
     ];
 

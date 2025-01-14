@@ -36,7 +36,7 @@ function Presentation() {
         <div className="lg:w-1/2 flex justify-center">
           <div className="w-44 h-44 sm:w-52 sm:h-52 md:w-64 md:h-64 rounded-full overflow-hidden shadow-lg bg-gray-700 p-2 flex items-center justify-center" style={{ backgroundColor: "rgb(247, 239, 228)" }}>
             <img
-              src="/public/eithel_img.jpeg"
+              src="/eithel_img.jpeg"
               alt="Eithel"
             />
           </div>
