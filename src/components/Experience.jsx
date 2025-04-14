@@ -3,9 +3,16 @@ import React, { useState } from "react";
 function Experience() {
     const experiences = [
         {
+            company: "GeoInnova Consultores SPA",
+            role: "back-end software engineer",
+            date: "Apr 2025 - Present",
+            logo: "/logo_geoinnova.png",
+            details: "details: \"I design, develop, and maintain RESTful APIs to integrate services and enable efficient data consumption across multiple systems. I build and optimize data processing pipelines to improve performance and storage operations, while managing relational databases to ensure data integrity and availability. Additionally, I implement scalable, secure, and high-performance backend solutions, deploying and maintaining systems in cloud environments. My role also involves applying best development practices, code reviews, and testing strategies to ensure software quality, collaborating closely with multidisciplinary teams to define and deliver technical solutions.",
+        },
+        {
             company: "Iplacex S.A.",
             role: "Development Coordinator",
-            date: "May 2023 - Present",
+            date: "May 2023 - Apr 2025",
             logo: "/iplacex.png",
             details: "I developed a web platform using Django to streamline content migration from LMS Moodle to LMS Blackboard, automating internal processes with Python in an AWS EC2 environment to synchronize user and course data. Additionally, I implemented ETL processes with Pentaho PDI for periodic user performance reporting and continuously enhanced web applications using the Blackboard REST API to optimize CRUD operations for users and courses.",
         },
