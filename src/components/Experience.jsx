@@ -10,18 +10,18 @@ function Experience() {
             details: "details: \"I design, develop, and maintain RESTful APIs to integrate services and enable efficient data consumption across multiple systems. I build and optimize data processing pipelines to improve performance and storage operations, while managing relational databases to ensure data integrity and availability. Additionally, I implement scalable, secure, and high-performance backend solutions, deploying and maintaining systems in cloud environments. My role also involves applying best development practices, code reviews, and testing strategies to ensure software quality, collaborating closely with multidisciplinary teams to define and deliver technical solutions.",
         },
         {
+            company: "Duoc UC",
+            role: "IT professor Online",
+            date: "Mar 2025 - Present",
+            logo: "/logo_duoc.jpg",
+            details: "I teach foundational programming concepts using Java, guiding students through problem-solving techniques, algorithm design, and structured programming principles. My role focuses on helping students develop computational thinking skills, covering topics such as variables, control structures, loops, functions, and basic object-oriented programming. Additionally, I design practical activities and assessments to reinforce theoretical knowledge and provide personalized feedback to support student",
+        },
+        {
             company: "Iplacex S.A.",
             role: "Development Coordinator",
             date: "May 2023 - Apr 2025",
             logo: "/iplacex.png",
             details: "I developed a web platform using Django to streamline content migration from LMS Moodle to LMS Blackboard, automating internal processes with Python in an AWS EC2 environment to synchronize user and course data. Additionally, I implemented ETL processes with Pentaho PDI for periodic user performance reporting and continuously enhanced web applications using the Blackboard REST API to optimize CRUD operations for users and courses.",
-        },
-        {
-            company: "Universidad de Talca",
-            role: "System Administrator",
-            date: "April 2018 - April 2023",
-            logo: "/utalca.png",
-            details: "I managed and administered LMS Moodle platforms and Linux servers, developing and automating internal processes using PHP and Python integrated with Curriculum Management System databases to handle user and course management in educational platforms. Additionally, I developed web applications to manage bulk CRUD operations in LMS platforms.",
         },
         {
             company: "Instituto Profesional AIEP",
@@ -50,6 +50,13 @@ function Experience() {
             date: "May 2022 - Dec 2022",
             logo: "/aiep.jpg",
             details: "Provided instruction in IT fundamentals and advanced programming concepts.",
+        },
+        {
+            company: "Universidad de Talca",
+            role: "System Administrator",
+            date: "April 2018 - April 2023",
+            logo: "/utalca.png",
+            details: "I managed and administered LMS Moodle platforms and Linux servers, developing and automating internal processes using PHP and Python integrated with Curriculum Management System databases to handle user and course management in educational platforms. Additionally, I developed web applications to manage bulk CRUD operations in LMS platforms.",
         },
         {
             company: "INACAP",
