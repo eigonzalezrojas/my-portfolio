@@ -8,7 +8,6 @@ export default {
     education: "Education",
     projects: "Projects",
     downloadCv: "Download CV",
-    cvUrl: "https://drive.google.com/file/d/1XaPp5_NMGFvx5SaMAbUsqc-N3pcQmC6b/view?usp=sharing",
   },
   hero: {
     greeting: "Hello, I'm",
