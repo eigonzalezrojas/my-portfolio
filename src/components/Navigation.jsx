@@ -1,35 +1,6 @@
-import { useState, useEffect } from "react";
-import "../../src/App.css"
+import "../../src/App.css";
 
 function Navigation() {
-  const [darkMode, setDarkMode] = useState(() => {
-    try {
-      const saved = localStorage.getItem("theme");
-      if (saved) return saved === "dark";
-    } catch {
-      /* localStorage unavailable */
-    }
-    return true; // default: dark
-  });
-
-  useEffect(() => {
-    if (darkMode) {
-      document.documentElement.classList.add("dark");
-    } else {
-      document.documentElement.classList.remove("dark");
-    }
-    try {
-      localStorage.setItem("theme", darkMode ? "dark" : "light");
-    } catch {
-      /* ignore */
-    }
-  }, [darkMode]);
-
-  const toggleTheme = () => {
-    setDarkMode(!darkMode);
-  };
-
-
   return (
     <div className="fixed bottom-4 left-1/2 transform -translate-x-1/2 bg-gray-800 dark:bg-gray-900 p-2 rounded-full shadow-lg border-2 border-gray-300 dark:border-gray-700">
       <div className="flex items-center space-x-2">
@@ -45,13 +16,6 @@ function Navigation() {
         <a href="mailto:eithelgonzalezrojas@gmail.com" className="text-gray-300 hover:text-green-400 transition hover:scale-125" aria-label="Email">
           <i className="fas fa-envelope text-lg"></i>
         </a>
-        <button onClick={toggleTheme} className="text-gray-300 hover:text-green-400 transition hover:scale-125 focus:outline-none" aria-label="Toggle Theme">
-          {darkMode ? (
-            <i className="fas fa-sun text-lg"></i>
-          ) : (
-            <i className="fas fa-moon text-lg"></i>
-          )}
-        </button>
       </div>
     </div>
   );

@@ -1,9 +1,34 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useLanguage } from "../context/LanguageContext";
 
 function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const { lang, setLang, t } = useLanguage();
+
+  const [darkMode, setDarkMode] = useState(() => {
+    try {
+      const saved = localStorage.getItem("theme");
+      if (saved) return saved === "dark";
+    } catch {
+      /* localStorage unavailable */
+    }
+    return true; // default: dark
+  });
+
+  useEffect(() => {
+    if (darkMode) {
+      document.documentElement.classList.add("dark");
+    } else {
+      document.documentElement.classList.remove("dark");
+    }
+    try {
+      localStorage.setItem("theme", darkMode ? "dark" : "light");
+    } catch {
+      /* ignore */
+    }
+  }, [darkMode]);
+
+  const toggleTheme = () => setDarkMode((current) => !current);
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -42,6 +67,10 @@ function Navbar() {
               EN
             </button>
           </div>
+
+          <button type="button" onClick={toggleTheme} aria-label="Toggle theme" aria-pressed={darkMode} className="flex items-center justify-center w-9 h-9 rounded-lg border border-green-500 text-green-400 hover:text-white hover:bg-green-500 transition">
+            {darkMode ? <i className="fas fa-sun"></i> : <i className="fas fa-moon"></i>}
+          </button>
 
           <a href={t("nav.cvUrl")} target="_blank" rel="noopener noreferrer" className="text-white bg-green-500 hover:bg-green-600 focus:ring-4 focus:outline-none focus:ring-green-300 font-medium rounded-lg text-sm px-4 py-2 text-center">
             {t("nav.downloadCv")}
