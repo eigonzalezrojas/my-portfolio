@@ -23,4 +23,15 @@ export default {
     role1: "Backend Developer",
     role2: "Professor",
   },
+  skills: {
+    heading: "My Skills",
+    languages: "Languages & Frameworks",
+    apis: "APIs & Integration",
+    architecture: "Architecture & Quality",
+    databases: "Databases",
+    cloud: "Cloud & DevOps",
+    batch: "Batch / ETL",
+    methodologies: "Methodologies",
+    ai: "AI-Assisted Development",
+  },
 };
