@@ -108,10 +108,10 @@ function Navbar() {
             {isCvOpen && (
               <div role="menu" className="absolute right-0 mt-2 w-40 rounded-lg shadow-lg overflow-hidden border border-green-500 z-30" style={{ backgroundColor: "rgb(31, 41, 55)" }}>
                 <a role="menuitem" href={CV_LINKS.es} target="_blank" rel="noopener noreferrer" onClick={() => setIsCvOpen(false)} className="block px-4 py-2 text-sm text-white hover:bg-green-500 transition">
-                  🇪🇸 Español
+                  <span className="font-semibold text-green-400 mr-2">ES</span>Español
                 </a>
                 <a role="menuitem" href={CV_LINKS.en} target="_blank" rel="noopener noreferrer" onClick={() => setIsCvOpen(false)} className="block px-4 py-2 text-sm text-white hover:bg-green-500 transition">
-                  🇬🇧 English
+                  <span className="font-semibold text-green-400 mr-2">EN</span>English
                 </a>
               </div>
             )}
