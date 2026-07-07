@@ -3,9 +3,32 @@
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/icon.svg" />
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Eithel Gonzalez</title>
+
+    <title>Eithel González — Backend Developer</title>
+    <meta name="description" content="Portafolio de Eithel González Rojas — Backend Developer especializado en Python, FastAPI, APIs REST, arquitectura de software y cloud (AWS)." />
+    <meta name="author" content="Eithel González Rojas" />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Eithel González — Backend Developer" />
+    <meta property="og:description" content="Backend Developer especializado en Python, FastAPI, APIs, arquitectura de software y cloud (AWS)." />
+    <meta property="og:image" content="/eithel_img.jpeg" />
+
+    <!-- Evita el flash de tema/idioma incorrecto antes de que React monte -->
+    <script>
+      (function () {
+        try {
+          var theme = localStorage.getItem("theme");
+          var dark = theme ? theme === "dark" : true;
+          if (dark) document.documentElement.classList.add("dark");
+          var lang = localStorage.getItem("lang");
+          if (lang === "es" || lang === "en") document.documentElement.lang = lang;
+        } catch (e) {
+          /* localStorage no disponible */
+        }
+      })();
+    </script>
   </head>
   <body>
     <div id="root"></div>

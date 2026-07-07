@@ -1,4 +1,3 @@
-import React from "react";
 import Navbar from "./components/Navbar";
 import Presentation from "./components/Presentation";
 import Navigation from "./components/Navigation";
@@ -12,7 +11,7 @@ function App() {
   return (
     <div className="relative min-h-screen flex flex-col">
       <Navbar />
-      <section id ="#" className="mb-0">
+      <section id ="home" className="mb-0">
         <Presentation />
       </section>
       <section id ="about" className="mt-0">

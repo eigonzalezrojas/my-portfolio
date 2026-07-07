@@ -4,7 +4,7 @@ function Presentation() {
       <div className="flex flex-col lg:flex-row items-center dark:bg-gray-800 bg-green-500 p-6 md:p-8 rounded-lg shadow-lg max-w-4xl w-full">
         <div className="lg:w-1/2 text-center lg:text-left mb-6 lg:mb-0">
           <p className="dark:text-green-400 text-white uppercase tracking-wide text-sm mb-2">
-            Hello, I'm
+            Hello, I&apos;m
           </p>
           <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold dark:text-green-400 text-white mb-4">
             Eithel González Rojas!
