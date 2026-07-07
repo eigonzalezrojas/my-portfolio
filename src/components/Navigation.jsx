@@ -1,14 +1,27 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import "../../src/App.css"
 
 function Navigation() {
-  const [darkMode, setDarkMode] = useState(true);
+  const [darkMode, setDarkMode] = useState(() => {
+    try {
+      const saved = localStorage.getItem("theme");
+      if (saved) return saved === "dark";
+    } catch {
+      /* localStorage unavailable */
+    }
+    return true; // default: dark
+  });
 
   useEffect(() => {
     if (darkMode) {
       document.documentElement.classList.add("dark");
     } else {
       document.documentElement.classList.remove("dark");
+    }
+    try {
+      localStorage.setItem("theme", darkMode ? "dark" : "light");
+    } catch {
+      /* ignore */
     }
   }, [darkMode]);
 
@@ -20,7 +33,7 @@ function Navigation() {
   return (
     <div className="fixed bottom-4 left-1/2 transform -translate-x-1/2 bg-gray-800 dark:bg-gray-900 p-2 rounded-full shadow-lg border-2 border-gray-300 dark:border-gray-700">
       <div className="flex items-center space-x-2">
-        <a href="/" className="text-gray-300 hover:text-green-400 transition hover:scale-125" aria-label="Home">
+        <a href="#home" className="text-gray-300 hover:text-green-400 transition hover:scale-125" aria-label="Home">
           <i className="fas fa-home text-lg"></i>
         </a>
         <a href="https://github.com/eigonzalezrojas" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-green-400 transition hover:scale-125" aria-label="GitHub">
