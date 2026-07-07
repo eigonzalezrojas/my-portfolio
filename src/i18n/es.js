@@ -8,6 +8,7 @@ export default {
     education: "Educación",
     projects: "Proyectos",
     downloadCv: "Descargar CV",
+    cvUrl: "https://drive.google.com/file/d/163HWK7vCwXo0_5AmB2W5yyGrI7RHpJik/view?usp=sharing",
   },
   hero: {
     greeting: "Hola, soy",
@@ -101,6 +102,33 @@ export default {
       inacap: {
         role: "Ingeniería en Informática",
         date: "Mar 2015 - Oct 2019 [Titulado]",
+      },
+    },
+  },
+  projects: {
+    heading: "Mis Proyectos",
+    intro:
+      "Una selección de proyectos donde he aplicado desarrollo backend, APIs, bases de datos y DevOps — desde sistemas de gestión de laboratorio hasta aplicaciones web completas.",
+    viewGithub: "Ver en GitHub",
+    items: {
+      lab: {
+        date: "Sep 2024 - Dic 2024",
+        description:
+          "Un sistema de gestión para un laboratorio de química que administra solicitudes de compuestos químicos, usuarios, proyectos y máquinas, entre otras funcionalidades.",
+      },
+      trello: {
+        date: "Ago 2024 - Sep 2024",
+        description:
+          "Un clon de Trello construido con un stack moderno —Docker, PostgreSQL, Express.js, Node.js y React con Material-UI— que corre en tres contenedores: db, client y server.",
+      },
+      wordpress: {
+        date: "Nov 2024 - Dic 2024",
+        description:
+          "Sitio web para el Instituto de Química y Recursos Naturales de la Universidad de Talca.",
+      },
+      eca: {
+        date: "Dic 2024 - En proceso",
+        description: "Una aplicación web para el monitoreo y gestión de cultivos en agronomía.",
       },
     },
   },

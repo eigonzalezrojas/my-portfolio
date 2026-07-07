@@ -43,7 +43,7 @@ function Navbar() {
             </button>
           </div>
 
-          <a href="/CV-EithelGonzalez.pdf" download="CV-EithelGonzalez.pdf" className="text-white bg-green-500 hover:bg-green-600 focus:ring-4 focus:outline-none focus:ring-green-300 font-medium rounded-lg text-sm px-4 py-2 text-center">
+          <a href={t("nav.cvUrl")} target="_blank" rel="noopener noreferrer" className="text-white bg-green-500 hover:bg-green-600 focus:ring-4 focus:outline-none focus:ring-green-300 font-medium rounded-lg text-sm px-4 py-2 text-center">
             {t("nav.downloadCv")}
           </a>
           <button onClick={toggleMenu} type="button" className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-white rounded-lg md:hidden hover:bg-green-400 focus:outline-none focus:ring-2 focus:ring-green-300" aria-controls="navbar-sticky" aria-expanded={isMenuOpen}>
