@@ -1,5 +1,11 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { useLanguage } from "../context/LanguageContext";
+
+// CV links are configuration (language-independent), not translatable copy.
+const CV_LINKS = {
+  es: "https://drive.google.com/file/d/163HWK7vCwXo0_5AmB2W5yyGrI7RHpJik/view?usp=sharing",
+  en: "https://drive.google.com/file/d/1XaPp5_NMGFvx5SaMAbUsqc-N3pcQmC6b/view?usp=sharing",
+};
 
 function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -33,6 +39,28 @@ function Navbar() {
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
+
+  const [isCvOpen, setIsCvOpen] = useState(false);
+  const cvMenuRef = useRef(null);
+
+  // Close the CV menu on outside click or Escape.
+  useEffect(() => {
+    if (!isCvOpen) return;
+    const handleClick = (event) => {
+      if (cvMenuRef.current && !cvMenuRef.current.contains(event.target)) {
+        setIsCvOpen(false);
+      }
+    };
+    const handleKey = (event) => {
+      if (event.key === "Escape") setIsCvOpen(false);
+    };
+    document.addEventListener("mousedown", handleClick);
+    document.addEventListener("keydown", handleKey);
+    return () => {
+      document.removeEventListener("mousedown", handleClick);
+      document.removeEventListener("keydown", handleKey);
+    };
+  }, [isCvOpen]);
 
   const navLinks = [
     { href: "#home", label: t("nav.home") },
@@ -72,9 +100,22 @@ function Navbar() {
             {darkMode ? <i className="fas fa-sun"></i> : <i className="fas fa-moon"></i>}
           </button>
 
-          <a href={t("nav.cvUrl")} target="_blank" rel="noopener noreferrer" className="text-white bg-green-500 hover:bg-green-600 focus:ring-4 focus:outline-none focus:ring-green-300 font-medium rounded-lg text-sm px-4 py-2 text-center">
-            {t("nav.downloadCv")}
-          </a>
+          <div className="relative" ref={cvMenuRef}>
+            <button type="button" onClick={() => setIsCvOpen((open) => !open)} aria-haspopup="true" aria-expanded={isCvOpen} className="flex items-center gap-2 text-white bg-green-500 hover:bg-green-600 focus:ring-4 focus:outline-none focus:ring-green-300 font-medium rounded-lg text-sm px-4 py-2 text-center">
+              {t("nav.downloadCv")}
+              <i className={`fas fa-chevron-down text-xs transition-transform ${isCvOpen ? "rotate-180" : ""}`}></i>
+            </button>
+            {isCvOpen && (
+              <div role="menu" className="absolute right-0 mt-2 w-40 rounded-lg shadow-lg overflow-hidden border border-green-500 z-30" style={{ backgroundColor: "rgb(31, 41, 55)" }}>
+                <a role="menuitem" href={CV_LINKS.es} target="_blank" rel="noopener noreferrer" onClick={() => setIsCvOpen(false)} className="block px-4 py-2 text-sm text-white hover:bg-green-500 transition">
+                  🇪🇸 Español
+                </a>
+                <a role="menuitem" href={CV_LINKS.en} target="_blank" rel="noopener noreferrer" onClick={() => setIsCvOpen(false)} className="block px-4 py-2 text-sm text-white hover:bg-green-500 transition">
+                  🇬🇧 English
+                </a>
+              </div>
+            )}
+          </div>
           <button onClick={toggleMenu} type="button" className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-white rounded-lg md:hidden hover:bg-green-400 focus:outline-none focus:ring-2 focus:ring-green-300" aria-controls="navbar-sticky" aria-expanded={isMenuOpen}>
             <span className="sr-only">Open main menu</span>
             <svg className="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14" >
