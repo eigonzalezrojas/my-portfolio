@@ -1,54 +1,62 @@
-# 🚀 My Portfolio — Eithel Gonzalez Rojas
+# 🚀 My Portfolio — Eithel González Rojas
 
-Portfolio personal desarrollado con React.js + Vite.  
-Este sitio web tiene como objetivo presentar mis proyectos, habilidades y experiencia en desarrollo web.
+Personal portfolio built with **React.js + Vite**.
+It showcases my profile as a **Backend Developer**: experience, skills, education and projects.
 
-¡Bienvenido y gracias por visitar mi portfolio!
+**Bilingual (Spanish / English)** site with a language switcher and light/dark mode.
+
+Welcome, and thanks for visiting my portfolio!
 
 ---
 
-## 🛠️ Tecnologías Utilizadas
+## 🛠️ Tech Stack
 
 - ⚛️ React.js
 - ⚡ Vite
-- 🎨 CSS / Tailwind
-- 🔗 React Router DOM
+- 🎨 Tailwind CSS
+- 🔣 react-icons + Font Awesome
+- 🌐 Custom i18n (Context + ES/EN dictionaries, persisted in `localStorage`)
 - ☁️ Deploy: Vercel / Netlify
 
 ---
 
-## 🎯 Características
+## 🎯 Features
 
-- Diseño limpio y minimalista.
-- Responsive Design.
-- Secciones:
-    - Sobre mí
-    - Proyectos
-    - Contacto
-    - Habilidades
-- Código modular y mantenible.
+- Clean, minimalist, responsive design.
+- **Bilingual (ES/EN)** with a persisted preference.
+- **Light/dark mode**, persisted.
+- Sections:
+    - About
+    - Experience
+    - Education
+    - Projects
+    - Skills
+    - Contact (email, LinkedIn, GitHub)
+- Modular, maintainable code.
 
 ---
 
-## 🚀 Instalación y Ejecución Local
+## 🚀 Local Setup
 
-1. Clonar el repositorio:
+1. Clone the repository:
 ```bash
 git clone https://github.com/eigonzalezrojas/my-portfolio.git
 cd my-portfolio
 ```
-2. Instalar dependencias:
+2. Install dependencies:
 ```bash
 npm install
-# o
-yarn install
 ```
-3. Ejecutar en modo desarrollo:
+3. Run in development mode:
 ```bash
 npm run dev
-# o
-yarn dev
 ```
 
-Hecho con 🫶 por Eithel Gonzalez Rojas
+Other commands:
+```bash
+npm run build     # production build
+npm run preview   # preview the build
+npm run lint      # static analysis
+```
 
+Made with 🫶 by Eithel González Rojas

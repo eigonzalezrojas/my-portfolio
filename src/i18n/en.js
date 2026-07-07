@@ -8,6 +8,7 @@ export default {
     education: "Education",
     projects: "Projects",
     downloadCv: "Download CV",
+    cvUrl: "https://drive.google.com/file/d/1XaPp5_NMGFvx5SaMAbUsqc-N3pcQmC6b/view?usp=sharing",
   },
   hero: {
     greeting: "Hello, I'm",
@@ -101,6 +102,33 @@ export default {
       inacap: {
         role: "Computer Engineering",
         date: "Mar 2015 - Oct 2019 [Graduated]",
+      },
+    },
+  },
+  projects: {
+    heading: "My Projects",
+    intro:
+      "A selection of projects where I've applied backend development, APIs, databases and DevOps — from laboratory management systems to full web applications.",
+    viewGithub: "View on GitHub",
+    items: {
+      lab: {
+        date: "Sep 2024 - Dec 2024",
+        description:
+          "A management system for a chemistry laboratory that handles requests for chemical compounds, users, projects and machines, among other features.",
+      },
+      trello: {
+        date: "Aug 2024 - Sep 2024",
+        description:
+          "A Trello clone built with a modern stack — Docker, PostgreSQL, Express.js, Node.js and React with Material-UI — running as three containers: db, client and server.",
+      },
+      wordpress: {
+        date: "Nov 2024 - Dec 2024",
+        description:
+          "Website for the Institute of Chemistry and Natural Resources at Universidad de Talca.",
+      },
+      eca: {
+        date: "Dec 2024 - In progress",
+        description: "A web application for crop monitoring and management in agronomy.",
       },
     },
   },
